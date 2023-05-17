@@ -39,8 +39,11 @@ const Login = () => {
 			<button onClick={handleGoogle}>Google login</button>
 			}
 
-                          <h3>name{data.displayName} </h3>
-			  <p>{data.email}</p>     
+                         {data && <div>
+                <h3>User: {data.displayName}</h3>
+                <p>Email: {data.email}</p>
+                <img src={data.photoURL} alt="" />
+            </div> }
 
 
 		</div>
